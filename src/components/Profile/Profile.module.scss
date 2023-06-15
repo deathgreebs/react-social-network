@@ -1,0 +1,28 @@
+.humanImg {
+    width: 600px;
+}
+
+.catImg {
+    width: 100px;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.content {
+    grid-area: c;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.posts {
+    display: block;
+}
+
+.item {
+    color: black;
+}
