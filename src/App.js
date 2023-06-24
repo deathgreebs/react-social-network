@@ -1,19 +1,33 @@
 import './App.scss';
+import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
+import Music from './components/Music/Music';
 import Navbar from './components/Navbar/Navbar';
+import News from './components/News/News';
 import Profile from './components/Profile/Profile';
+import {Route, Routes} from 'react-router-dom';
+import Settings from './components/Settings/Settings';
 
+const App = (props) => {
 
-const App = () => {
-  return (
-    <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      <Profile />
-    </div>
-  );
+    return (
+            <div className="app-wrapper">
+                <Header/>
+                <Navbar/>
+                <div className='app-wrapper-content'>
+                    <div className='container'>
+                        <Routes>
+                            <Route path="/profile/*" element={<Profile state={props.state.profilePage}/>}/>
+                            <Route path="/dialogs/*" element={<Dialogs state={props.state.messagesPage}/>}/>
+                            <Route path="/news/*" element={<News/>}/>
+                            <Route path="/music/*" element={<Music/>}/>
+                            <Route path="/settings/*" element={<Settings/>}/>
+                        </Routes>
+                    </div>
+                </div>
+            </div>
+    );
 }
-
 
 
 export default App;
