@@ -5,7 +5,7 @@ import Message from './Message/Message'
 const Dialogs = (props) => {
 
     let dialogsElements = props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} key={dialog.id}/>)
-    let messagesElements = props.state.messages.map(message => <Message message={message.message} key={message.id}/>)
+    let messagesElements = props.state.messages.map((message, counter = 0) => <Message counter={counter++} message={message.message} key={message.id}/>)
 
     return (
         <div className={classes.dialogs}>
@@ -14,6 +14,8 @@ const Dialogs = (props) => {
             </div>
             <div className={classes.messages}>
                 {messagesElements}
+                <textarea name="" id="" cols="10" rows="10"></textarea>
+                <button>Send Message</button>
             </div>
         </div>
     );

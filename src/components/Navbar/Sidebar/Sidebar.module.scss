@@ -1,0 +1,32 @@
+.friendCircle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+.friends {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.sidebar {
+    border-radius: 70px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+    -8px -8px 16px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

@@ -1,30 +1,98 @@
 .dialogs {
-    display: grid;
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  height: fit-content;
 }
 
 .dialogsItems {
-    padding: 10px;
+  padding-top: 10px;
 
-    .dialog {
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        a.active {
-            color: chartreuse;
-        }
+  .container {
+    margin: 20px;
+  }
+
+  .dialog {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 14px #bebebe,
+    -7px -7px 14px #ffffff;
+    padding: 10px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: black;
     }
+
+    a.active {
+      color: chartreuse;
+    }
+
+    img {
+      width: 60px;
+    }
+  }
 }
 
+.img {
+  width: 60px;
+    height: 60px;
+}
 
+.wrapperLeft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.wrapperRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
 .messages {
-    padding: 15px;
-    .message {
-        color: white;
-    }
+  padding: 30px;
+  position: relative;
+  flex-direction: column;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 6px 6px 12px #bebebe,
+  -6px -6px 12px #ffffff;
+  margin: 30px;
+  min-height: 100vh;
+  display: grid;
+  //place-content: center;
+  gap: 20px;
+  font-size: 20px;
 
+  .message {
+    --r: 25px; /* the radius */
+    --t: 30px; /* the size of the tail */
+    max-width: 300px;
+    padding: calc(2 * var(--r) / 3);
+    -webkit-mask: radial-gradient(var(--t) at var(--_d) 0, #0000 98%, #000 102%) var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+    conic-gradient(at var(--r) var(--r), #000 75%, #0000 0) calc(var(--r) / -2) calc(var(--r) / -2) padding-box,
+    radial-gradient(50% 50%, #000 98%, #0000 101%) 0 0/var(--r) var(--r) space padding-box;
+    background: linear-gradient(135deg, #e0e0e0, #1384C5) border-box;
+    color: #fff;
+  }
+
+  .left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+  }
+
+  .right {
+    --_d: 100%;
+    border-right: var(--t) solid #0000;
+    margin-left: var(--t);
+    place-self: end;
+  }
 }

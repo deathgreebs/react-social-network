@@ -1,5 +1,23 @@
 
 .posts {
-    display: block;
-    margin-top: 20px;
+  display: block;
+  margin-top: 20px;
+}
+
+textarea {
+  border-radius: 25px;
+  background: #e0e0e0;
+  box-shadow: inset 7px 7px 14px #bebebe,
+  inset -7px -7px 14px #ffffff;
+  padding: 20px;
+  border: none;
+    margin-bottom: 20px;
+}
+button {
+    border-radius: 25px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  7px 7px 14px #bebebe,
+    -7px -7px 14px #ffffff;
+    border: none;
+    padding: 20px;
 }
